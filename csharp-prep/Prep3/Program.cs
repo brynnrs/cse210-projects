@@ -3,17 +3,18 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.Write("What is the magic number? ");
-        string inputNumber = Console.ReadLine();
-        int magicNumber = int.Parse(inputNumber);
-        
+    {        
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 100);
+        Console.WriteLine("Welcome to the number guessing game!\nTo play, please guess a number between 1 and 100.");
+
         int guessNumber = -1;
+
         do
         {
             Console.Write("What is your guess? ");
-            string inputNumber2 = Console.ReadLine();
-            guessNumber = int.Parse(inputNumber2);
+            string inputNumber = Console.ReadLine();
+            guessNumber = int.Parse(inputNumber);
 
             if (guessNumber < magicNumber)
             {
