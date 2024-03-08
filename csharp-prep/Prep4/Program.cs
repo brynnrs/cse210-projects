@@ -25,11 +25,18 @@ class Program
         }
         while (inputNumber != 0);
 
-        //Find the sum.
+        //Find and display the sum.
         int sum = 0;
         foreach (int number in numbers)
         {
             sum = sum + number;
         }
+        Console.WriteLine($"The sum is: {sum}");
+
+        //Find and display the average.
+        int amntOfNums = numbers.Count;
+        int average = sum/amntOfNums;
+        Console.WriteLine($"The average is: {average}");
+
     }
 }
