@@ -1,5 +1,4 @@
-using System;
-using System.Diagnostics.CodeAnalysis; //.Collections.Generic;
+using System.Collections.Generic;
 class Program
 {
     static void Main(string[] args)
@@ -35,8 +34,18 @@ class Program
 
         //Find and display the average.
         int amntOfNums = numbers.Count;
-        int average = sum/amntOfNums;
+        float average = ((float)sum)/amntOfNums;
         Console.WriteLine($"The average is: {average}");
 
+        //Find and display the largest number.
+        int largest = numbers [0];
+        foreach (int number in numbers)
+        {
+            if (number > largest)
+            {
+                largest = number;
+            }
+        }
+        Console.WriteLine($"The largest number is: {largest}");
     }
 }
