@@ -1,23 +1,30 @@
+using System.IO;
+using System.Reflection.Metadata.Ecma335;
+
 public class Journal
 {
-    public List<Entry> _entries;
+    public List<Entry> _entries = new List<Entry>();
 
-    public void AddEntry()
+    public void AddEntry(Entry newEntry)
     {
         DateTime theCurrentDT = DateTime.Now;
         string dateText = theCurrentDT.ToShortDateString();
 
-        PromptGenerator aPrompt = new PromptGenerator();        
-        string prompt = aPrompt.GetRandomPrompt();
+        PromptGenerator Prompts = new PromptGenerator();
+        // PromptGenerator object that has a list that is populated        
+        string prompt = Prompts.GetRandomPrompt();
         Console.WriteLine(prompt);
 
         Console.Write("> ");
         string entry = Console.ReadLine();
 
-        Entry anEntry = new Entry();
-        anEntry._date = dateText;
-        anEntry._promptText = prompt;
-        anEntry._entryText = entry;
+        //Storing data in new entry
+        newEntry._date = dateText;
+        newEntry._promptText = prompt;
+        newEntry._entryText = entry;
+
+        //Add to entries list
+        _entries.Add(newEntry);
 
     }
 
@@ -31,11 +38,16 @@ public class Journal
 
     public void LoadFromFile(string file)
     {
-
+        
     }
 
     public void SaveToFile(string file)
     {
 
+        using (StreamWriter outputFile = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            outputFile.WriteLine(entry);
+        }
     }
 } 
