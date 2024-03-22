@@ -39,6 +39,19 @@ public class Journal
     public void LoadFromFile(string file)
     {
         
+        string[] lines = System.IO.File.ReadAllLines(file);
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split("|");
+
+            Entry newEntry = new Entry();
+            newEntry._date = parts[0];
+            newEntry._promptText = parts[1];
+            newEntry._entryText = parts [2];
+
+            _entries.Add(newEntry);
+        }
     }
 
     public void SaveToFile(string file)
@@ -47,7 +60,9 @@ public class Journal
         using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
+            {
             outputFile.WriteLine(entry.toString());
+            }
         }
     }
 } 
