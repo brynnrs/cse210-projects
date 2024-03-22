@@ -9,7 +9,8 @@ public class Entry
         Console.WriteLine($"Date: {_date} - Prompt: {_promptText}");
         Console.WriteLine(_entryText);
     }
-    public string toString(){
-        return $"Date: {_date} - Prompt: {_promptText}\n {_entryText}";
+    public string toString()
+    {
+        return $"{_date}|{_promptText}|{_entryText}";
     }
 } 
