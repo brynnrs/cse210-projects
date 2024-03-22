@@ -8,6 +8,7 @@ class Program
         Console.WriteLine("Welcome to the Journal Program!");
         
         Journal theJournal = new Journal();
+        Entry anEntry = new Entry();
 
         int response = 0;
 
@@ -24,7 +25,7 @@ class Program
 
             if (response == 1)
             {
-                theJournal.AddEntry();
+                theJournal.AddEntry(anEntry);
                 response = 0;
             }
 
