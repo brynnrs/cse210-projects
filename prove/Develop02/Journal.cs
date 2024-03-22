@@ -47,7 +47,7 @@ public class Journal
         using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
-            outputFile.WriteLine(entry);
+            outputFile.WriteLine(entry.toString());
         }
     }
 } 
