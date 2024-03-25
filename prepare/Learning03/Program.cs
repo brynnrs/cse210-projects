@@ -7,15 +7,23 @@ class Program
         Fraction f1 = new Fraction();
         Fraction f2 = new Fraction(6);
         Fraction f3 = new Fraction(6,7);
-        Console.WriteLine("Hello Learning03 World!");
 
-        Fraction f4 = new Fraction(8,9);
-        Console.WriteLine(f4.GetTop());
-        Console.WriteLine(f4.GetBottom());
-        f4.SetTop(5);
-        f4.SetBottom(6);
-        Console.WriteLine(f4.GetTop());
-        Console.WriteLine(f4.GetBottom());
+        Fraction f4 = new Fraction(1);
+        Fraction f5 = new Fraction(5);
+        Fraction f6 = new Fraction(3,4);
+        Fraction f7 = new Fraction(1,3);
+
+        Console.WriteLine(f4.GetFractionString());
+        Console.WriteLine(f4.GetDecimalValue());
+
+        Console.WriteLine(f5.GetFractionString());
+        Console.WriteLine(f5.GetDecimalValue());
+
+        Console.WriteLine(f6.GetFractionString());
+        Console.WriteLine(f6.GetDecimalValue());
+
+        Console.WriteLine(f7.GetFractionString());
+        Console.WriteLine(f7.GetDecimalValue());
 
     }
 }

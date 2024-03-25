@@ -42,4 +42,16 @@ public class Fraction
         _bottom = bottom;
         return bottom;
     }
+
+    public string GetFractionString()
+    {
+        string fraction = $"{_top}/{_bottom}";
+        return fraction;
+    }
+
+    public double GetDecimalValue()
+    {
+        double decimalNum = (double)_top/(double)_bottom;
+        return decimalNum;
+    }
 }
