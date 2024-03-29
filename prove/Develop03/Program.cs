@@ -1,5 +1,7 @@
 using System;
 
+// Showing Creativity and Exceeding Requirements:
+// I added the functionality for HideRandomWords to randomly select from only those words that were not already hidden.
 class Program
 {
     static void Main(string[] args)
