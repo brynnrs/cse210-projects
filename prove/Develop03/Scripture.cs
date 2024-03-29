@@ -49,7 +49,7 @@ public class Scripture
 
     public string GetDisplayText()
     {
-        string fullScripture = $"{_reference.GetDisplayText()}\n";
+        string fullScripture = $"{_reference.GetDisplayText()}";
         for(int i = 0;i < _words.Count; i++)
         {
             fullScripture += $" {_words[i].GetDisplayText()}";
