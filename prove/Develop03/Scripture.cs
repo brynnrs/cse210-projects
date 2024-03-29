@@ -27,13 +27,15 @@ public class Scripture
 
     public void HideRandomWords(int numberToHide)
     {
-        if(numberToHide >= numberDeck.Count){
+        if(numberToHide >= numberDeck.Count)
+        {
             for(int i = 0; i< _words.Count; i++)
             {
                 _words[i].Hide();
             }
         }
-        else{
+        else
+        {
             Random randomGenerator = new Random();
 
             for (int i = 0; i < numberToHide; i++)
@@ -42,17 +44,28 @@ public class Scripture
                 numberDeck.Remove(wordToHideIndex);
                 _words[wordToHideIndex].Hide();
             }
-
         }
     }
 
     public string GetDisplayText()
     {
-        return "";
+        string fullScripture = $"{_reference.GetDisplayText()}\n";
+        for(int i = 0;i < _words.Count; i++)
+        {
+            fullScripture += $" {_words[i].GetDisplayText()}";
+        } 
+        return fullScripture;
     }
 
     public bool IsCompletelyHidden()
     {
-        return false;
+        for (int i = 0; i < _words.Count; i++)
+        {
+            if (!_words[i].IsHidden())
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
