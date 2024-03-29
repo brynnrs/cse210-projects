@@ -1,3 +1,5 @@
+using System.Globalization;
+
 public class Scripture
 {
     private Reference _reference;
@@ -5,7 +7,16 @@ public class Scripture
 
     public Scripture(Reference Reference, string text)
     {
+        _reference = Reference;
 
+        _words = new List<Word>();
+        string [] splitWords = text.Split(" ");
+
+        foreach (string w in splitWords)
+        {
+            Word aWord = new Word(w);
+            _words.Add(aWord);
+        } 
     }
 
     public void HideRandomWords(int numberToHide)
