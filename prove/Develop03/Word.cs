@@ -22,9 +22,13 @@ public class Word
     public bool IsHidden()
     {
         if (_isHidden == true)
+        {
             return true;
+        }
         else
+        {
             return false;
+        }
     }
 
     public string GetDisplayText()
@@ -32,10 +36,16 @@ public class Word
         string underscores = "";
 
         if (_isHidden == false)
+        {
             return _text;
+        }
         else
+        {
             for (int i = 0; i <_text.Length; i++)
+            {
                 underscores += "_";
+            }
             return underscores;
+        }
     }
 }
