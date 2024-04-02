@@ -4,7 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Assignment simpleAssign = new Assignment("Samuel Bennett", "Multiplication");
-        Console.WriteLine(simpleAssign.GetSummary());
+        MathAssignment mathAssign = new MathAssignment("Roberto Rodriguez", "Fractions","7.3","8-19");
+        Console.WriteLine(mathAssign.GetSummary());
+        Console.WriteLine(mathAssign.GetHomeworkList());        
     }
 }
