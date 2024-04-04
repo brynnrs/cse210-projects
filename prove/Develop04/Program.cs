@@ -8,6 +8,7 @@ class Program
 
         while (response !=4)
         {
+            Console.Clear();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("1. Start breathing activity");
             Console.WriteLine("2. Start reflecting activity");
@@ -18,6 +19,10 @@ class Program
 
             if (response == 1)
             {
+                BreathingActivity breathingActivity = new BreathingActivity();
+                breathingActivity.DisplayStartingMessage();
+                breathingActivity.Run();
+                breathingActivity.DisplayEndingMessage();
                 response = 0;
             }
 
