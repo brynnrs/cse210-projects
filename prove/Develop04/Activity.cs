@@ -3,11 +3,12 @@ public class Activity
     protected string _name;
     protected string _description;
     protected int _duration;
-
+    protected int _pause;
     public Activity()
     {
         _name = "Activity";
         _description = "This is a basic Activity";
+        _pause = 5;
     }
 
     public void DisplayStartingMessage()
@@ -19,14 +20,15 @@ public class Activity
         _duration = int.Parse(Console.ReadLine());
         Console.Clear();
         Console.WriteLine("Get ready...");
+        ShowSpinner(_pause);
     }
 
     public void DisplayEndingMessage()
     {
         Console.WriteLine("\nWell done!!");
-        ShowSpinner(7);
+        ShowSpinner(_pause);
         Console.WriteLine($"\nYou have completed another {_duration} of the {_name}");
-        ShowSpinner(7);
+        ShowSpinner(_pause);
     }
 
     public void ShowSpinner(int seconds)
