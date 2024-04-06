@@ -8,7 +8,7 @@ public class Activity
     {
         _name = "Activity";
         _description = "This is a basic Activity";
-        _pause = 5;
+        _pause = 1;
     }
 
     public void DisplayStartingMessage()
@@ -27,17 +27,19 @@ public class Activity
     {
         Console.WriteLine("\nWell done!!");
         ShowSpinner(_pause);
-        Console.WriteLine($"\nYou have completed another {_duration} of the {_name}");
+        Console.WriteLine($"\nYou have completed another {_duration} seconds of the {_name}");
         ShowSpinner(_pause);
     }
 
     public void ShowSpinner(int seconds)
     {
-        List<string> animationStrings = new List<string>();
-        animationStrings.Add("|");
-        animationStrings.Add("/");
-        animationStrings.Add("—");
-        animationStrings.Add("\\");
+        List<string> animationStrings = new List<string>
+        {
+            "|",
+            "/",
+            "—",
+            "\\"
+        };
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(seconds);
