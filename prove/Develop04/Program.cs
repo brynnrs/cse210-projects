@@ -1,5 +1,8 @@
 using System;
 
+//Showing Creativity and Exceeding Requirements:
+// I made sure no random prompts/questions were repeated until they had all been used at least once in that session.
+
 class Program
 {
     static void Main(string[] args)
