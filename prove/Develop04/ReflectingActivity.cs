@@ -13,7 +13,15 @@ public class ReflectingActivity : Activity
 
     public void Run()
     {
+        Console.WriteLine("\nConsider the following prompt:");
         DisplayPrompt();
+        Console.WriteLine("\nWhen you have something in mind, press enter to continue.");
+        Console.ReadLine();
+
+        Console.WriteLine("Now ponder on each of the following questions as they relate to this experience.");
+        Console.Write("You may begin in: ");
+        ShowCountDown(_pause);
+        Console.Clear();
         DisplayQuestions();
     }
 
@@ -61,17 +69,13 @@ public class ReflectingActivity : Activity
 
     public void DisplayPrompt()
     {
-        Console.WriteLine("\nConsider the following prompt:");
-
         bool isDisplayed = false;
         while (!isDisplayed)
         {
             if (_prompts.Count > 0)
             {
                 Console.WriteLine($"\n——— {GetRandomPrompt()}———");
-                Console.WriteLine("\nWhen you have something in mind, press enter to continue.");
-                isDisplayed = true;
-                Console.ReadLine();
+                isDisplayed = true;  
             }
             else
             {
@@ -82,11 +86,6 @@ public class ReflectingActivity : Activity
 
     public void DisplayQuestions()
     {
-        Console.WriteLine("Now ponder on each of the following questions as they relate to this experience.");
-        Console.Write("You may begin in: ");
-        ShowCountDown(_pause);
-        Console.Clear();
-
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);
 
