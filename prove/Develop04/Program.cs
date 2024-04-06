@@ -7,6 +7,7 @@ class Program
         int response = 0;
         BreathingActivity breathingActivity = new BreathingActivity();
         ReflectingActivity reflectingActivity = new ReflectingActivity();
+        ListingActivity listingActivity = new ListingActivity();
 
         while (response !=4)
         {
@@ -21,7 +22,6 @@ class Program
 
             if (response == 1)
             {
-                
                 breathingActivity.DisplayStartingMessage();
                 breathingActivity.Run();
                 breathingActivity.DisplayEndingMessage();
@@ -30,7 +30,6 @@ class Program
 
             else if (response == 2)
             {
-                
                 reflectingActivity.DisplayStartingMessage();
                 reflectingActivity.Run();
                 reflectingActivity.DisplayEndingMessage();
@@ -39,6 +38,9 @@ class Program
 
             else if (response == 3)
             {
+                listingActivity.DisplayStartingMessage();
+                listingActivity.Run();
+                listingActivity.DisplayEndingMessage();
                 response = 0;
             }
 
