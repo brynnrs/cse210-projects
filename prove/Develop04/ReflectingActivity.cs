@@ -94,7 +94,7 @@ public class ReflectingActivity : Activity
             if (_questions.Count > 0)
             {
             Console.Write($"> {GetRandomQuestion()} ");
-            ShowSpinner(2);
+            ShowSpinner(10);
             Console.WriteLine();
             }
             else

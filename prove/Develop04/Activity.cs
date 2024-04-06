@@ -8,7 +8,7 @@ public class Activity
     {
         _name = "Activity";
         _description = "This is a basic Activity";
-        _pause = 1;
+        _pause = 5;
     }
 
     public void DisplayStartingMessage()
