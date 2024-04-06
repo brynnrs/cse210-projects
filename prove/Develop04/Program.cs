@@ -5,6 +5,8 @@ class Program
     static void Main(string[] args)
     {
         int response = 0;
+        BreathingActivity breathingActivity = new BreathingActivity();
+        ReflectingActivity reflectingActivity = new ReflectingActivity();
 
         while (response !=4)
         {
@@ -19,7 +21,7 @@ class Program
 
             if (response == 1)
             {
-                BreathingActivity breathingActivity = new BreathingActivity();
+                
                 breathingActivity.DisplayStartingMessage();
                 breathingActivity.Run();
                 breathingActivity.DisplayEndingMessage();
@@ -28,6 +30,10 @@ class Program
 
             else if (response == 2)
             {
+                
+                reflectingActivity.DisplayStartingMessage();
+                reflectingActivity.Run();
+                reflectingActivity.DisplayEndingMessage();
                 response = 0;
             }
 
