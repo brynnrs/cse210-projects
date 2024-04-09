@@ -4,16 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        Square square = new Square("purple", 6);
-        Console.WriteLine(square.GetColor());
-        Console.WriteLine(square.GetArea());
+        List<Shape> shapes = new List<Shape>();
+        
+        Square shape1 = new Square("purple", 6);
+        shapes.Add(shape1);
 
-        Rectangle rectangle = new Rectangle("green", 2, 3);
-        Console.WriteLine(rectangle.GetColor());
-        Console.WriteLine(rectangle.GetArea());
+        Rectangle shape2 = new Rectangle("green", 2, 3);
+        shapes.Add(shape2);
 
-        Circle circle = new Circle("blue", 4);
-        Console.WriteLine(circle.GetColor());
-        Console.WriteLine(circle.GetArea());
+        Circle shape3 = new Circle("blue", 4);
+        shapes.Add(shape3);
+
+        foreach (Shape s in shapes)
+        {
+            string color = s.GetColor();
+            double area = s.GetArea();
+            
+            Console.WriteLine($"Color: {color} \n Area: {area}");
+        }
     }
 }
