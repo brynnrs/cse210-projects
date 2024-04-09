@@ -11,7 +11,7 @@ public class Customer
         _address = address;
     }
 
-    public bool inUSA()
+    public bool inUSA(Address address)
     {
         return false;
     }
