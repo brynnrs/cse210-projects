@@ -11,12 +11,12 @@ public abstract class Activity
         _date = date;
         _lengthInMins = lengthInMins;       
     }
-    public abstract double CalculateDistance();
-    public abstract double CalculateSpeed();
-    public abstract double CalculatePace();
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
 
     public string GetSummary()
     {
-        return $"{_date} {_activityType} ({_lengthInMins} min)- Distance: {CalculateDistance()} miles, Speed: {CalculateSpeed()} mph, Pace: {CalculatePace()} min per mile";
+        return $"{_date} {_activityType} ({_lengthInMins} min)- Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
     }
 }

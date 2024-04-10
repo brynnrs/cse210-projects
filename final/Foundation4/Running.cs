@@ -8,17 +8,17 @@ public class Running : Activity
         _distance = distance;
     }
 
-    public override double CalculateDistance()
+    public override double GetDistance()
+    {
+        return _distance;
+    }
+
+    public override double GetSpeed()
     {
         return 0;
     }
 
-    public override double CalculateSpeed()
-    {
-        return 0;
-    }
-
-    public override double CalculatePace()
+    public override double GetPace()
     {
         return 0;
     }

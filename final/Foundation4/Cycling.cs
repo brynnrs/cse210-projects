@@ -8,17 +8,17 @@ public class Cycling : Activity
         _speed = speed;
     }
 
-    public override double CalculateDistance()
+    public override double GetDistance()
     {
         return 0;
     }
 
-    public override double CalculateSpeed()
+    public override double GetSpeed()
     {
         return 0;
     }
 
-    public override double CalculatePace()
+    public override double GetPace()
     {
         return 0;
     }
