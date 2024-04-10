@@ -18,81 +18,54 @@ class Program
 
         Address address2 = new Address("345 Unknown Street", "Mysterious City", "Hidden","Secret Country");
         Reception reception = new Reception(
-            "itsSnotMe@mucus.uk", 
-            "Nose Blowing Competition", 
-            "This is a reception for the great Barnabus the Great. Ruler of running noses", 
+            "johnandjane4ever@gmail.com", 
+            "John & Jane's Wedding Reception", 
+            "Join us in celebrating the union of John and Jane Doe for time and all eternity.", 
             "11/31/2024", 
             "3:23pm", 
             address2
             );
    
 
-
         Address address3 = new Address("678 Home Street", "Backwoods City", "Old West","USA");
         OutdoorGathering outdoorGathering = new OutdoorGathering(
-            "The Gloomiest of Days",
-            "Outdoor Musical: The Play: The Musical: The Play: The Sequel: Electric Boogaloo", 
-            "The sequel to the original play about a musical about a play about an outdoor musical", 
-            "4 score and 7 seven years ago", 
-            "High Noon", 
+            "Cloudy (with a chance of raining food)",
+            "\"Cloudy with a Chance of Meatballs\" Movie in the Park Night", 
+            "Come see a childhood favorite film at the Backwoods City Park while eating your favorite foods.", 
+            "7/25/2024", 
+            "7:00pm (Movie starts at dusk)", 
             address3
             );
         
-        
-        List<Event> events = new List<Event>
-        {
-            lecture,
-            reception,
-            outdoorGathering
-        };
+
         
         Console.Clear();
-        Console.WriteLine("~~~ Short Description ~~~\n");
+        Console.WriteLine("~~~ EVENT 1 ~~~\n");
+        Console.WriteLine("- SHORT DESCRIPTION -");
         Console.WriteLine(lecture.GetShortDescription());
-        Console.WriteLine("\n(Press ENTER to View More Details)");
-        Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("~~~ Standard Details ~~~\n");
+        Console.WriteLine("\n- STANDARD DETAILS -");
         Console.WriteLine(lecture.GetStandardDetails());
-        Console.WriteLine("\n(Press ENTER to View More Details)");
-        Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("~~~ Full Details ~~~\n");
+        Console.WriteLine("\n- FULL DETAILS -");
         Console.WriteLine(lecture.GetFullDetails());
-        Console.WriteLine("\n(Press ENTER to View Next Event)");
-        Console.ReadLine();
 
-        Console.Clear();
-        Console.WriteLine("~~~ Short Description ~~~\n");
+
+        Console.WriteLine("\n\n\n~~~ EVENT 2 ~~~\n");
+        Console.WriteLine("- SHORT DESCRIPTION -");
         Console.WriteLine(reception.GetShortDescription());
-        Console.WriteLine("\n(Press ENTER to View More Details)");
-        Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("~~~ Standard Details ~~~\n");
+        Console.WriteLine("\n- STANDARD DETAILS -");
         Console.WriteLine(reception.GetStandardDetails());
-        Console.WriteLine("\n(Press ENTER to View More Details)");
-        Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("~~~ Full Details ~~~\n");
+        Console.WriteLine("\nFULL DETAILS");
         Console.WriteLine(reception.GetFullDetails());
-        Console.WriteLine("\n(Press ENTER to View Next Event)");
-        Console.ReadLine();
 
-        Console.Clear();
-        Console.WriteLine("~~~ Short Description ~~~\n");
+
+        Console.WriteLine("\n\n\n~~~ EVENT 3 ~~~\n");
+        Console.WriteLine("- SHORT DESCRIPTION -");
         Console.WriteLine(outdoorGathering.GetShortDescription());
-        Console.WriteLine("\n(Press ENTER to View More Details)");
-        Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("~~~ Standard Details ~~~\n");
+        Console.WriteLine("\n- STANDARD DETAILS -");
         Console.WriteLine(outdoorGathering.GetStandardDetails());
-        Console.WriteLine("\n(Press ENTER to View More Details)");
-        Console.ReadLine();
-        Console.Clear();
-        Console.WriteLine("~~~ Full Details ~~~\n");
+        Console.WriteLine("\nFULL DETAILS");
         Console.WriteLine(outdoorGathering.GetFullDetails());
 
-        Console.Clear();
-        Console.WriteLine("Buy YOUR tickets NOW at awesomeevent.com!!!\n\n");
+        Console.WriteLine("\n\n!!! Buy YOUR tickets NOW at awesomeevent.com !!!\n\n\n");
     }
 }
