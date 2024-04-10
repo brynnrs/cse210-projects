@@ -1,27 +1,22 @@
 using System.Runtime.CompilerServices;
 
-public class Activity
+public abstract class Activity
 {
+    protected string _activityType = "Activity";
     protected DateTime _date;
     protected float _lengthInMins;
 
-    public virtual float CalculateDistance()
+    public Activity(DateTime date, float lengthInMins)
     {
-        return 0;
+        _date = date;
+        _lengthInMins = lengthInMins;       
     }
-
-    public virtual float CalculateSpeed()
-    {
-        return 0;
-    }
-
-    public virtual float CalculatePace()
-    {
-        return 0;
-    }
+    public abstract double CalculateDistance();
+    public abstract double CalculateSpeed();
+    public abstract double CalculatePace();
 
     public string GetSummary()
     {
-        return "";
+        return $"{_date} {_activityType} ({_lengthInMins} min)- Distance: {CalculateDistance()} miles, Speed: {CalculateSpeed()} mph, Pace: {CalculatePace()} min per mile";
     }
 }
