@@ -2,7 +2,7 @@ public class Cycling : Activity
 {
     private float _speed;
 
-    public Cycling(DateTime date, float activityMins, float speed) : base(date, activityMins)
+    public Cycling(DateOnly date, float activityMins, float speed) : base(date, activityMins)
     {
         _activityType = "Cycling";
         _speed = speed;

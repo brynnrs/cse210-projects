@@ -3,10 +3,10 @@ using System.Runtime.CompilerServices;
 public abstract class Activity
 {
     protected string _activityType = "Activity";
-    protected DateTime _date;
+    protected DateOnly _date;
     protected float _activityMins;
 
-    public Activity(DateTime date, float activityMins)
+    public Activity(DateOnly date, float activityMins)
     {
         _date = date;
         _activityMins = activityMins;       
