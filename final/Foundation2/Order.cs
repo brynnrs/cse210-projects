@@ -11,16 +11,39 @@ public class Order
 
     public float TotalCost()
     {
-        return 0;
+        float sumTotal = 0;
+        foreach (Product p in _productsList)
+        {
+            sumTotal += p.TotalCost();
+        }
+
+        float shippingCost;
+        if (_customer.CustomerInUSA())
+        {
+            shippingCost = 5;
+        }
+        else
+        {
+            shippingCost = 35;
+        }
+
+        float oTotalCost = sumTotal + shippingCost; 
+        return oTotalCost;
     }
 
     public string GetPackingLabel()
     {
-        return "";
+        string packingLabel = "";
+        foreach (Product p in _productsList)
+        {
+            string productInfo = $"{p.GetProductName()} ({p.GetProductID()})";
+            packingLabel += $"\n{productInfo}";
+        }
+        return packingLabel;
     }
 
     public string GetShippingLabel()
     {
-        return "";
+        return $"\n{_customer.GetCustomerName()}\n{_customer.GetCustomerAddress()}";
     }
 }
