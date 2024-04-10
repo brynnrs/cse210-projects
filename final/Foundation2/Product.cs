@@ -13,9 +13,19 @@ public class Product
         _quantity = quantity;
     }
 
+    public string GetProductName()
+    {
+        return _name;
+    }
+
+    public string GetProductID()
+    {
+        return _productID;
+    }
+    
     public float TotalCost()
     {
-        float totalCost = _price * _quantity;
-        return totalCost;
+        float pTotalCost = _price * _quantity;
+        return pTotalCost;
     }
 }
