@@ -20,7 +20,7 @@ public class Event
     }
     public string GetStandardDetails()
     {
-        return $"Standard Details:\nTitle: {_eventTitle}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nAddress: {_address.GetAddress()}";
+        return $"Title: {_eventTitle}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nAddress: {_address.GetAddress()}";
     }
 
     public string GetShortDescription()

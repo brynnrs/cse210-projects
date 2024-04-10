@@ -2,7 +2,9 @@ public class Reception : Event
 {
     private string _rsvpEmail;
 
-    public Reception(string rsvpEmail, string eventTitle, 
+    public Reception(
+        string rsvpEmail, 
+        string eventTitle, 
         string description, 
         string date, 
         string time, 
