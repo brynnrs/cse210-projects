@@ -11,8 +11,8 @@ public class Reception : Event
         Address address
         ) : base (eventTitle, description, date, time, address)
     {
-        _rsvpEmail = rsvpEmail;
         _eventType = "Reception";
+        _rsvpEmail = rsvpEmail;
     }
     public string GetFullDetails()
     {

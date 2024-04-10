@@ -14,9 +14,9 @@ public class Lecture : Event
         Address address
         ) : base (eventTitle, description, date, time, address)
     {
+        _eventType = "Lecture";
         _speaker = speaker;
         _capacityLimit = capacityLimit;
-        _eventType = "Lecture";
     }
     
     public string GetFullDetails()
