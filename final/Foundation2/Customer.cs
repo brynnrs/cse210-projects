@@ -11,8 +11,18 @@ public class Customer
         _address = address;
     }
 
-    public bool inUSA(Address address)
+    public string GetCustomerName()
     {
-        return false;
+        return _name;
+    }
+
+    public string GetCustomerAddress()
+    {
+        return _address.GetAddress();
+    }
+
+    public bool CustomerInUSA()
+    {
+        return _address.AddressInUSA();
     }
 }
