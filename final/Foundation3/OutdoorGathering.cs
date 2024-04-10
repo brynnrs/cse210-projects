@@ -9,9 +9,10 @@ public class OutdoorGathering : Event
         string date, 
         string time, 
         Address address
-        ) : base (eventTitle, description, date, time, address, "Outdoor Gathering")
+        ) : base (eventTitle, description, date, time, address)
         {
             _weather = weather;
+            _eventType = "Outdoor Gathering";
         }
     public string GetFullDetails()
     {

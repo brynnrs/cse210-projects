@@ -12,10 +12,11 @@ public class Lecture : Event
         string date, 
         string time, 
         Address address
-        ) : base (eventTitle, description, date, time, address, "Lecture")
+        ) : base (eventTitle, description, date, time, address)
     {
         _speaker = speaker;
         _capacityLimit = capacityLimit;
+        _eventType = "Lecture";
     }
     
     public string GetFullDetails()

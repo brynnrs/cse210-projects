@@ -2,21 +2,20 @@ using System.Net.Sockets;
 
 public class Event
 {
-    protected string _eventType;
+    protected string _eventType = "Event";
     protected string _eventTitle;
     protected string _description;
     protected string _date;
     protected string _time;
     protected Address _address;
 
-    public Event(string eventTitle, string description, string date, string time, Address address, string eventType)
+    public Event(string eventTitle, string description, string date, string time, Address address)
     {
         _eventTitle = eventTitle;
         _description = description;
         _date = date;
         _time = time;
         _address = address;
-        _eventType = eventType;
     }
     public string GetStandardDetails()
     {

@@ -9,9 +9,10 @@ public class Reception : Event
         string date, 
         string time, 
         Address address
-        ) : base (eventTitle, description, date, time, address, "Reception")
+        ) : base (eventTitle, description, date, time, address)
     {
         _rsvpEmail = rsvpEmail;
+        _eventType = "Reception";
     }
     public string GetFullDetails()
     {
