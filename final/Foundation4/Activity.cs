@@ -4,12 +4,12 @@ public abstract class Activity
 {
     protected string _activityType = "Activity";
     protected DateTime _date;
-    protected float _lengthInMins;
+    protected float _activityMins;
 
-    public Activity(DateTime date, float lengthInMins)
+    public Activity(DateTime date, float activityMins)
     {
         _date = date;
-        _lengthInMins = lengthInMins;       
+        _activityMins = activityMins;       
     }
     public abstract double GetDistance();
     public abstract double GetSpeed();
@@ -17,6 +17,6 @@ public abstract class Activity
 
     public string GetSummary()
     {
-        return $"{_date} {_activityType} ({_lengthInMins} min)- Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
+        return $"{_date} {_activityType} ({_activityMins} min)- Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
     }
 }

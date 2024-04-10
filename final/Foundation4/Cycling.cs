@@ -2,7 +2,7 @@ public class Cycling : Activity
 {
     private float _speed;
 
-    public Cycling(DateTime date, float lengthInMins, float speed) : base(date, lengthInMins)
+    public Cycling(DateTime date, float activityMins, float speed) : base(date, activityMins)
     {
         _activityType = "Cycling";
         _speed = speed;
@@ -10,7 +10,7 @@ public class Cycling : Activity
 
     public override double GetDistance()
     {
-        double distance = _lengthInMins / GetPace();
+        double distance = _activityMins / GetPace();
         return distance;
     }
 
