@@ -13,13 +13,20 @@ public class Address
         _country = country;
     }
 
-    public bool inUSA()
+    public bool AddressInUSA()
     {
-        return false;
+        if (_country == "USA" || _country == "United States of America" || _country == "U.S." || _country == "United States")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public string GetAddress()
     {
-        return "";
+        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
     }
 }
