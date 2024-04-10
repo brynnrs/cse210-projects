@@ -15,12 +15,14 @@ public class Running : Activity
 
     public override double GetSpeed()
     {
-        return 0;
+        double speed = _distance / _lengthInMins * 60;
+        return speed;
     }
 
     public override double GetPace()
     {
-        return 0;
+        double pace = 60 / GetSpeed();
+        return pace;
     }
 
 }
