@@ -54,7 +54,7 @@ class Program
         Console.WriteLine(reception.GetShortDescription());
         Console.WriteLine("\n- STANDARD DETAILS -");
         Console.WriteLine(reception.GetStandardDetails());
-        Console.WriteLine("\nFULL DETAILS");
+        Console.WriteLine("\n- FULL DETAILS -");
         Console.WriteLine(reception.GetFullDetails());
 
 
@@ -63,7 +63,7 @@ class Program
         Console.WriteLine(outdoorGathering.GetShortDescription());
         Console.WriteLine("\n- STANDARD DETAILS -");
         Console.WriteLine(outdoorGathering.GetStandardDetails());
-        Console.WriteLine("\nFULL DETAILS");
+        Console.WriteLine("\n- FULL DETAILS -");
         Console.WriteLine(outdoorGathering.GetFullDetails());
 
         Console.WriteLine("\n\n!!! Buy YOUR tickets NOW at awesomeevent.com !!!\n\n\n");
