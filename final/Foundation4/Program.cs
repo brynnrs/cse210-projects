@@ -4,11 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        DateOnly date = DateOnly.FromDateTime(DateTime.Today);
+        DateTime date = DateTime.Now;
 
-        Running running = new Running(date, 25, 3);
+        Running running = new Running(date, 30, 3);
 
-        Cycling cycling = new Cycling(date, 30, 15);
+        Cycling cycling = new Cycling(date, 35, 12.5);
 
         Swimming swimming = new Swimming(date, 30, 20);
 

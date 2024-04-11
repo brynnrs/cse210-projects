@@ -1,8 +1,8 @@
 public class Running : Activity
 {
-    private float _distance;
+    private double _distance;
 
-    public Running(DateOnly date, float activityMins, float distance) : base(date, activityMins)
+    public Running(DateTime date, double activityMins, double distance) : base(date, activityMins)
     {
         _activityType = "Running";
         _distance = distance;
