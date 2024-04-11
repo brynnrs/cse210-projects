@@ -9,15 +9,15 @@ public class Order
         _customer = customer;
     }
 
-    public float TotalCost()
+    public double TotalCost()
     {
-        float sumTotal = 0;
+        double sumTotal = 0;
         foreach (Product p in _productsList)
         {
             sumTotal += p.TotalCost();
         }
 
-        float shippingCost;
+        double shippingCost;
         if (_customer.CustomerInUSA())
         {
             shippingCost = 5;
@@ -27,7 +27,7 @@ public class Order
             shippingCost = 35;
         }
 
-        float oTotalCost = sumTotal + shippingCost; 
+        double oTotalCost = sumTotal + shippingCost; 
         return oTotalCost;
     }
 
