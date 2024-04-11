@@ -22,7 +22,7 @@ class Program
         Console.Clear();
         foreach (Activity a in activities)
         {
-            Console.WriteLine($"- {a.GetSummary()}");
+            Console.WriteLine($"> {a.GetSummary()}");
             Console.WriteLine();
         }
     }
