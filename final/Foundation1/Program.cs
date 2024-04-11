@@ -35,10 +35,13 @@ class Program
             video3
         };
 
+        Console.Clear();
         foreach (Video v in videos)
         {
+            Console.WriteLine("~~~~~~~~~~~~~~~");
             v.DisplayVideoInfo();
             v.DisplayAllComments();
         }
+        Console.WriteLine("~~~~~~~~~~~~~~~");
     }
 }

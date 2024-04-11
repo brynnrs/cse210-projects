@@ -42,6 +42,5 @@ public class Video
             Console.WriteLine($"\"{c.GetComment()}\"");
             Console.WriteLine();
         }
-        Console.WriteLine("~~~~~~~~~~~~~~~");
     }
 }
