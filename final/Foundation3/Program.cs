@@ -66,6 +66,6 @@ class Program
         Console.WriteLine("\n- FULL DETAILS -");
         Console.WriteLine(outdoorGathering.GetFullDetails());
 
-        Console.WriteLine("\n\n!!! Buy YOUR tickets NOW at awesomeevent.com !!!\n\n\n");
+        Console.WriteLine("\n\n\n!!! Buy YOUR tickets NOW at awesomeevent.com !!!\n\n\n");
     }
 }
