@@ -8,9 +8,9 @@ class Program
         Customer customer1 = new Customer("John Doe", address1);
 
         List<Product> productsList1 = new List<Product>();
-        Product product1 = new Product("Shoes", "111-1111-11111", 20, 1);
-        Product product2 = new Product("Hat", "222-2222-22222", 10, 2);
-        Product product3 = new Product("Shirt", "333-3333-33333", 15, 3);
+        Product product1 = new Product("Shoes", "111-1111-11111", 23.79, 1);
+        Product product2 = new Product("Hat", "222-2222-22222", 7.99, 2);
+        Product product3 = new Product("Shirt", "333-3333-33333", 12.63, 3);
         productsList1.Add(product1);
         productsList1.Add(product2);
         productsList1.Add(product3);
@@ -21,9 +21,9 @@ class Program
         Customer customer2 = new Customer("Jane Doe", address2);
         
         List<Product> productsList2 = new List<Product>();
-        Product product4 = new Product("Pants", "444-4444-44444", 40, 4);
-        Product product5 = new Product("Socks", "555-5555-55555", 3, 5);
-        Product product6 = new Product("Necklace", "666-6666-66666", 25, 6);
+        Product product4 = new Product("Pants", "444-4444-44444", 44.99, 4);
+        Product product5 = new Product("Socks", "555-5555-55555", 3.59, 5);
+        Product product6 = new Product("Necklace", "666-6666-66666", 27.33, 6);
         productsList2.Add(product4);
         productsList2.Add(product5);
         productsList2.Add(product6);
@@ -35,14 +35,14 @@ class Program
             order2
         };
 
+        Console.Clear();
         foreach (Order o in orders)
         {
-            Console.WriteLine($"\nPacking Label: \n{o.GetPackingLabel()}\n");
-            Console.WriteLine("~~~~~~~~~~~~~");
-            Console.WriteLine($"\nShipping Label: \n{o.GetShippingLabel()}\n");
-            Console.WriteLine("~~~~~~~~~~~~~");
-            Console.WriteLine($"\nOrder Total: \n${o.TotalCost()}\n");
-            Console.WriteLine("~~~~~~~~~~~~~");
+            Console.WriteLine("~~~~~~~~~~~~~\n");
+            Console.WriteLine($"- PACKING LABEL -{o.GetPackingLabel()}\n");
+            Console.WriteLine($"- SHIPPING LABEL -{o.GetShippingLabel()}\n");
+            Console.WriteLine($"- ORDER TOTAL -\n${o.TotalCost().ToString("N2")}\n");
         }
+        Console.WriteLine("~~~~~~~~~~~~~\n");
     }
 }
